@@ -1,0 +1,223 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #39ff14;
+    --neon-yellow: #ffff00;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.neon-text {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.neon-text:hover, .nav-link.neon-text:hover, .nav-link.neon-text.active {
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+}
+
+.navbar-brand.neon-text {
+    font-size: 1.5rem;
+}
+
+.nav-link.neon-text {
+    font-size: 1.1rem;
+}
+
+.hero-image {
+    background-image: url('../img/intercolor-portada.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary, .neon-btn {
+    background-color: var(--neon-green);
+    border-color: var(--neon-green);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--neon-green);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .neon-btn:hover {
+    background-color: var(--neon-yellow);
+    border-color: var(--neon-yellow);
+    box-shadow: 0 0 20px var(--neon-yellow);
+    color: black;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+
+.product-card:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-pink);
+    transform: translateY(-5px);
+}
+
+.neon-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 5px var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.btn-danger.neon-btn {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 5px var(--neon-pink);
+}
+
+.btn-danger.neon-btn:hover {
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-pink);
+}
+
+#carrito-container .card-body {
+    padding: 1rem;
+}
+
+#carrito-container .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#carrito-container .card-text {
+    margin-bottom: 0.5rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card .card-body {
+    padding: 1rem;
+}
+
+.carrito-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--neon-blue);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.carrito-item:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.form-control {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: var(--neon-blue);
+}
+
+.form-control:focus {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 0 0.25rem rgba(255, 0, 255, 0.25);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+    }
+    100% {
+        text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+    }
+}
+
+.neon-pulse {
+    animation: neonPulse 2s infinite;
+}
+
+
+/* Estilos específicos para el texto de bienvenida */
+.hero-text h1.welcome-text,
+.hero-text p.welcome-text {
+    color: #ffffff !important; /* Forzamos el color blanco */
+    text-shadow: 0 0 2px var(--neon-blue), 0 0 4px var(--neon-blue);
+}
+
+.hero-text h1.welcome-text {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-text p.welcome-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Aseguramos que no haya otros estilos interfiriendo */
+.hero-text h1.welcome-text:not(.neon-text),
+.hero-text p.welcome-text:not(.neon-text) {
+    color: #ffffff !important;
+}
+
